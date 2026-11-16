@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal Refleksi & RTL - KKG Mranggen Pertemuan 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="bg-indigo-800 text-white shadow-lg py-6 px-4 mb-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-xl md:text-2xl font-bold flex items-center justify-center gap-2">
+                <i class="fa-solid fa-book-bookmark"></i> Lembar Refleksi & RTL
+            </h1>
+            <p class="text-indigo-200 text-xs md:text-sm mt-1">KKG Mranggen - Pertemuan 4 | Silakan isi formulir di bawah ini dengan objektif.</p>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 pb-16">
+        <form id="refleksiForm" class="space-y-6">
+            
+            <!-- Identitas -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
+                <h2 class="text-base font-bold text-slate-700 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
+                    <i class="fa-solid fa-user-pen text-indigo-600"></i> Identitas Pendidik
+                </h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Nama Lengkap & Gelar</label>
+                        <input type="text" id="namaGuru" required placeholder="Contoh: Muhammad Imam Suwiji, M.Pd." class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Kelas / Mata Pelajaran</label>
+                            <input type="text" id="kelasMapel" required placeholder="Contoh: Kelas VI / Tematik" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Satuan Pendidikan (Sekolah)</label>
+                            <input type="text" id="sekolah" required placeholder="Contoh: SD Negeri Batursari 3" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bagian 1: Jurnal Refleksi -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
+                <h2 class="text-base font-bold text-slate-700 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
+                    <i class="fa-solid fa-clipboard-list text-indigo-600"></i> 1. Jurnal Refleksi Pembelajaran Berbasis Data
+                </h2>
+                
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Tujuan Pembelajaran</label>
+                        <textarea id="tujuanPembelajaran" rows="2" required placeholder="Tuliskan tujuan pembelajaran..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Aktivitas Utama</label>
+                        <textarea id="aktivitasUtama" rows="2" required placeholder="Aktivitas utama siswa di kelas..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Bukti Capaian Murid (Data Formatif)</label>
+                        <textarea id="buktiCapaian" rows="2" required placeholder="Sertakan persentase atau data formatif nyata (misal: 80% tuntas)..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-emerald-700 uppercase text-xs mb-1">Hal yang Berjalan Baik</label>
+                            <textarea id="halBaik" rows="2" required placeholder="Aspek yang sukses..." class="w-full bg-emerald-50/40 border border-emerald-200 rounded-lg p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-bold text-rose-700 uppercase text-xs mb-1">Kendala yang Muncul & Bukti</label>
+                            <textarea id="kendala" rows="2" required placeholder="Hambatan beserta bukti empiris..." class="w-full bg-rose-50/40 border border-rose-200 rounded-lg p-3 focus:ring-2 focus:ring-rose-500 focus:outline-none"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Dugaan Penyebab (Analisis Kritis)</label>
+                        <textarea id="dugaanPenyebab" rows="2" required placeholder="Analisis akar permasalahan..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Respons Guru terhadap Perilaku Murid</label>
+                            <textarea id="responsGuru" rows="2" required placeholder="Tindakan langsung guru..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Rencana Perubahan (Tindakan Spesifik)</label>
+                            <textarea id="rencanaPerubahan" rows="2" required placeholder="Langkah perbaikan berikutnya..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Indikator Keberhasilan & Waktu Pengecekan</label>
+                        <input type="text" id="indikatorKeberhasilan" required placeholder="Contoh: 85% siswa mencapai KKTP minggu depan" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bagian 2: Rencana Tindak Lanjut (RTL) -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
+                <h2 class="text-base font-bold text-slate-700 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
+                    <i class="fa-solid fa-route text-indigo-600"></i> 2. Rencana Tindak Lanjut (RTL 2–4 Minggu)
+                </h2>
+                
+                <div class="space-y-4 text-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Masalah / Fokus Utama</label>
+                            <textarea id="rtlFokus" rows="2" required placeholder="Fokus perbaikan 2-4 minggu..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Tindakan Pertama di Kelas</label>
+                            <textarea id="rtlTindakan" rows="2" required placeholder="Langkah awal implementasi..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-600 uppercase text-xs mb-1">Mitra Pendamping, Waktu, & Solusi Hambatan</label>
+                        <input type="text" id="rtlInfo" required placeholder="Contoh: Rekan Sejawat / Setiap Sabtu / Solusi alternatif..." class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Kirim -->
+            <div class="text-center pt-2">
+                <button type="submit" id="submitBtn" class="w-full md:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 mx-auto">
+                    <i class="fa-solid fa-paper-plane"></i> Kirim Refleksi ke Server Admin
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Modal Sukses -->
+    <div id="successModal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl p-6 max-w-sm w-full text-center shadow-2xl">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">Berhasil Terkirim!</h3>
+            <p class="text-xs text-slate-500 mb-6">Jurnal refleksi dan RTL Anda telah berhasil masuk ke database KKG Mranggen.</p>
+            <button onclick="location.reload()" class="w-full bg-indigo-600 text-white py-2.5 rounded-xl font-semibold text-sm">Isi Refleksi Baru</button>
+        </div>
+    </div>
+
+    <!-- Script Kirim Data ke Google Sheets -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxxh_CPijQ_tv2_7z6MRZT6GURqgfkVZ9vTn5mmXkY7gWpZaj_5_f7NxHqOVIq7z1oQ/exec';
+
+        const form = document.getElementById('refleksiForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successModal = document.getElementById('successModal');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sedang Mengirim...';
+
+            const requestData = {
+                namaGuru: document.getElementById('namaGuru').value,
+                kelasMapel: document.getElementById('kelasMapel').value,
+                sekolah: document.getElementById('sekolah').value,
+                tujuanPembelajaran: document.getElementById('tujuanPembelajaran').value,
+                aktivitasUtama: document.getElementById('aktivitasUtama').value,
+                buktiCapaian: document.getElementById('buktiCapaian').value,
+                halBaik: document.getElementById('halBaik').value,
+                kendala: document.getElementById('kendala').value,
+                dugaanPenyebab: document.getElementById('dugaanPenyebab').value,
+                responsGuru: document.getElementById('responsGuru').value,
+                rencanaPerubahan: document.getElementById('rencanaPerubahan').value,
+                indikatorKeberhasilan: document.getElementById('indikatorKeberhasilan').value,
+                rtlFokus: document.getElementById('rtlFokus').value,
+                rtlTindakan: document.getElementById('rtlTindakan').value,
+                rtlInfo: document.getElementById('rtlInfo').value
+            };
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(requestData)
+            })
+            .then(response => {
+                successModal.classList.remove('hidden');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Kirim Refleksi ke Server Admin';
+            })
+            .catch(error => {
+                alert('Terjadi kesalahan saat mengirim data. Silakan coba lagi.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Kirim Refleksi ke Server Admin';
+            });
+        });
+    </script>
+</body>
+</html>
